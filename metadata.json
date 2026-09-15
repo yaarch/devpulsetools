@@ -1,0 +1,6 @@
+{
+  "name": "DevPulse Utilities - Free Developer & Finance Suite",
+  "description": "A comprehensive, 100% client-side suite of essential developer, designer, real estate, finance, and security utility tools with multi-language and RTL support, offline PWA capabilities, and privacy-first execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

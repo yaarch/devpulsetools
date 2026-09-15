@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="devpulse-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#4F46E5" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  
+  <!-- Rounded Squircle Canvas -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#devpulse-grad)" filter="url(#shadow)"/>
+  
+  <!-- Subtle Inner Border -->
+  <rect x="2.5" y="2.5" width="59" height="59" rx="15.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1"/>
+  
+  <!-- DevPulse Modern Wrench Tool Symbol -->
+  <g fill="#FFFFFF">
+    <!-- Wrench Head -->
+    <path d="M42.8 14.2 C45.5 15.3 47.7 17.5 48.8 20.2 C49.4 21.6 49.6 23.2 49.3 24.7 C49.0 26.2 48.1 27.5 47.0 28.5 L43.5 25.0 C43.0 24.5 42.1 24.5 41.6 25.0 L39.0 27.6 C38.5 28.1 38.5 29.0 39.0 29.5 L42.5 33.0 C41.5 34.1 40.2 35.0 38.7 35.3 C37.2 35.6 35.6 35.4 34.2 34.8 C32.9 34.2 31.8 33.3 30.9 32.2 L20.5 42.6 C19.2 43.9 17.2 44.5 15.5 44.0 C13.7 43.5 12.3 42.1 11.8 40.3 C11.3 38.6 11.9 36.6 13.2 35.3 L23.6 24.9 C22.5 24.0 21.6 22.9 21.0 21.6 C20.4 20.2 20.2 18.6 20.5 17.1 C20.8 15.6 21.7 14.3 22.8 13.3 L26.3 16.8 C26.8 17.3 27.7 17.3 28.2 16.8 L30.8 14.2 C31.3 13.7 31.3 12.8 30.8 12.3 L27.3 8.8 C28.3 7.7 29.6 6.8 31.1 6.5 C32.6 6.2 34.2 6.4 35.6 7.0 C38.3 8.1 40.5 10.3 41.6 13.0 Z" transform="translate(4, 4)"/>
+    <!-- Knob circle cutout in handle -->
+    <circle cx="21" cy="43" r="2.5" fill="url(#devpulse-grad)"/>
+    <!-- Tiny Sparkle / Pulse dot -->
+    <circle cx="48" cy="16" r="2.2" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+# DevPulse Tools Robots.txt
+# https://devpulsetools.pages.dev/
+
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://devpulsetools.pages.dev/sitemap.xml

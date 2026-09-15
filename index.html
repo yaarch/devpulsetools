@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevPulse Utilities - Free Developer, Finance & Student Suite</title>
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#4F46E5" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="DevPulse" />
+
+    <!-- Prevent third-party browser extensions (e.g. MetaMask, Web3 injected scripts) from triggering unhandled errors -->
+    <script>
+      (function() {
+        var isExtensionError = function(msg) {
+          if (!msg) return false;
+          var s = String(msg).toLowerCase();
+          return s.indexOf('metamask') !== -1 ||
+                 s.indexOf('ethereum') !== -1 ||
+                 s.indexOf('failed to connect to metamask') !== -1 ||
+                 s.indexOf('evm') !== -1 ||
+                 s.indexOf('web3') !== -1;
+        };
+        window.addEventListener('unhandledrejection', function(event) {
+          var reason = (event && event.reason && (event.reason.message || event.reason.stack)) || String(event && event.reason);
+          if (isExtensionError(reason)) {
+            event.preventDefault();
+            if (typeof event.stopImmediatePropagation === 'function') event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+        window.addEventListener('error', function(event) {
+          var message = (event && event.message) || '';
+          if (isExtensionError(message)) {
+            event.preventDefault();
+            if (typeof event.stopImmediatePropagation === 'function') event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('devpulse_theme');
+          var isDark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="description" content="A comprehensive, 100% client-side suite of essential developer, designer, real estate, finance, and security utility tools with multi-language and RTL support, zero server logging, and privacy-first execution." />
+    <meta name="keywords" content="Real estate calculator, mortgage amortization, JSON formatter, base64 encoder decoder, QR code generator, image compressor, regex tester, JWT decoder, diff checker, markdown editor, CSS flexbox, gradient generator, SQL formatter, cron parser, free developer tools, client side tools, devpulse tools" />
+    <meta name="author" content="DevPulse Tools" />
+    <link rel="canonical" href="https://devpulsetools.pages.dev/" />
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="WXJB5ftONnTgx_tJVynVx2tpSni75tKJOk7kl0CSwQ0" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="DevPulse Utilities - Free Developer & Finance Suite" />
+    <meta property="og:description" content="A comprehensive, 100% client-side suite of essential developer, designer, real estate, finance, and security utility tools with multi-language and RTL support, zero server logging, and privacy-first execution." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devpulsetools.pages.dev/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DevPulse Utilities - Free Developer & Finance Suite" />
+    <meta name="twitter:description" content="A comprehensive, 100% client-side suite of essential developer, designer, real estate, finance, and security utility tools with multi-language and RTL support, zero server logging, and privacy-first execution." />
+
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "DevPulse Tools",
+      "url": "https://devpulsetools.pages.dev/",
+      "description": "A comprehensive suite of free, fast, 100% browser-based developer, designer, finance, and security utilities.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All modern browsers",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white transition-colors duration-200 min-h-screen">
+    <noscript>
+      <div style="max-width: 800px; margin: 40px auto; padding: 24px; font-family: system-ui, sans-serif; line-height: 1.6; background: #ffffff; color: #1e293b; border-radius: 12px; border: 1px solid #e2e8f0;">
+        <h1>DevPulse Tools - Free Developer Utilities Suite</h1>
+        <p>A fast, 100% client-side privacy-first collection of essential tools for developers, designers, and creators. All operations run directly in your browser without sending your sensitive data to external servers.</p>
+        <h2>Available Utilities:</h2>
+        <ul>
+          <li><a href="/tools/json-formatter/">JSON Formatter &amp; Validator</a> - Prettify, minify, validate, and inspect JSON with syntax error detection.</li>
+          <li><a href="/tools/base64-encode-decode/">Base64 Encoder / Decoder</a> - Encode and decode text or binary files to and from Base64.</li>
+          <li><a href="/tools/image-compressor/">Image Compressor &amp; Resizer</a> - Compress JPEG, PNG, and WebP images locally.</li>
+          <li><a href="/tools/qr-code-generator/">QR Code Generator</a> - Generate custom QR codes for URLs, Wi-Fi, vCards, and text.</li>
+          <li><a href="/tools/markdown-editor/">Markdown Live Editor</a> - Split-screen markdown editor with live HTML preview.</li>
+          <li><a href="/tools/password-generator/">Strong Password Generator</a> - Cryptographically secure passwords with entropy meter.</li>
+          <li><a href="/tools/hash-generator/">Hash Generator</a> - Compute SHA-256, SHA-512, MD5 hashes with optional HMAC.</li>
+          <li><a href="/tools/url-cleaner/">URL Cleaner &amp; Privacy Link</a> - Strip UTM tracking parameters and tracking queries.</li>
+          <li><a href="/tools/color-converter/">Color Converter &amp; Contrast Checker</a> - HEX, RGB, HSL, CMYK converter with WCAG contrast audit.</li>
+          <li><a href="/tools/regex-tester/">Regex Live Tester</a> - Real-time regular expression tester with capture groups.</li>
+          <li><a href="/tools/diff-checker/">Text &amp; Code Diff Checker</a> - Visual side-by-side line comparison for code and text.</li>
+          <li><a href="/tools/unit-converter/">Unit Converter</a> - Fast conversion across length, weight, storage, temperature, and speed.</li>
+          <li><a href="/tools/timestamp-converter/">Timestamp Converter</a> - Live Unix epoch clock, ISO-8601, and human date converter.</li>
+          <li><a href="/tools/html-minifier/">HTML Minifier</a> - Strip whitespace and comments to compress HTML markup.</li>
+          <li><a href="/tools/uuid-generator/">UUID / GUID Generator</a> - Generate RFC4122 v4 UUIDs individually or in bulk.</li>
+          <li><a href="/tools/jwt-decoder/">JWT Token Decoder</a> - Inspect JSON Web Token headers, payloads, and expiration.</li>
+          <li><a href="/tools/case-converter/">Case Converter</a> - Convert text to camelCase, snake_case, kebab-case, Title Case, etc.</li>
+          <li><a href="/tools/word-counter/">Word Counter &amp; Text Analyzer</a> - Analyze word count, reading time, sentences, and keywords.</li>
+          <li><a href="/tools/svg-to-png/">SVG to PNG Converter</a> - Convert vector SVGs to high-resolution raster PNG images.</li>
+          <li><a href="/tools/css-box-shadow-generator/">CSS Box Shadow Generator</a> - Multi-layer box shadow designer with CSS code export.</li>
+        </ul>
+        <p>Please enable JavaScript in your browser to interact with these tools dynamically.</p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e73d633a56554af6978d52af32f9de92"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
+
